@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/dbbank
+    username: postgres
+    password: admin
+  jpa:
+    hibernate:
+      ddl-auto: validate
+
+
+
+#server:
+#  port: 8088

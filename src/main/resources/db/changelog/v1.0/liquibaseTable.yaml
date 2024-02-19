@@ -1,0 +1,30 @@
+databaseChangeLog:
+  - changeSet:
+      id: liquibaseTable-create
+      author: hidayatzada
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  name: id
+                  type: serial
+                  constraints:
+                    primaryKey: true
+
+              - column:
+                  name: name
+                  type: varchar(255)
+              - column:
+                  name: author
+                  type: varchar(255)
+              - column:
+                  name: price
+                  type: int
+            tableName: books
+        - addAutoIncrement:
+            columnDataType: serial
+            columnName: id
+            defaultOnNull: false
+            generationType: ALWAYS
+            incrementBy: 1
+            tableName: book
